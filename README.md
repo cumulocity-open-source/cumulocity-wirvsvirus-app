@@ -10,4 +10,4 @@ https://wirvsvirus.cumulocity.com/
 - start application with `npm run start`
 
 # How it looks
-![Current State](sample.png)
+![Current State](screenshot.png)
