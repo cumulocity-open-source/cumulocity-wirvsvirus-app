@@ -8,3 +8,6 @@ https://wirvsvirus.cumulocity.com/
 
 # Run
 - start application with `npm run start`
+
+# How it looks
+![Current State](sample.png)
