@@ -1,0 +1,33 @@
+<c8y-title>#WirVsVirus App</c8y-title>
+<div class="container-fluid">
+    <h1>Auslastung Krankenhäuser</h1>
+    <div class="row">
+        <div class="col-lg-6" *ngIf="loadedFinish">
+            <div *ngFor="let states of getStates()">
+                <h1>{{states}}</h1>
+
+                <table class="table">
+                    <tr>
+                        <th>Betten Art</th>
+                        <th>Gesamt Freie Betten</th>
+                        <th>Gesamt Anzahl Betten</th>
+                        <th>Gesamt Covid Betten</th>
+                        <th>Gesamt belegte Betten</th>
+                        <th>Gesamt Soll Betten</th>
+                    </tr>
+                    <tr *ngIf="getNormalHospitalKPIS(states, 'Normalbetten'); let kpis">
+                        <td>Normalbetten</td>
+                        <td>{{kpis.freeNormal}}</td>
+                        <td>{{kpis.maxNormal}}</td>
+                        <td>{{kpis.coronaNormal}}</td>
+                        <td>{{kpis.notFreeNormal}}</td>
+                        <td>{{kpis.sollNormal}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div style="height: 500px" id="YOUR_CONTAINER_ELEMENT_ID"></div>
+        </div>
+    </div>
+</div>
